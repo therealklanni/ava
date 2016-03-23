@@ -8,7 +8,8 @@ function defaults() {
 		serial: false,
 		exclusive: false,
 		skipped: false,
-		callback: false
+		callback: false,
+		always: false
 	};
 }
 
@@ -42,6 +43,8 @@ function serialize(collection) {
 	addTitles('beforeEach', collection.tests);
 	addTitles('after', collection.tests);
 	addTitles('afterEach', collection.tests);
+	addTitles('alwaysAfter', collection.tests);
+	addTitles('alwaysAfterEach', collection.tests);
 	return ret;
 }
 
